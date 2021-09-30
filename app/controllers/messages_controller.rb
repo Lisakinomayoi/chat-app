@@ -15,6 +15,8 @@ class MessagesController < ApplicationController
       render :index  #index.html.erb
     end  
   end
+
+  
   
   private
 
