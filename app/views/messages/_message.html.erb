@@ -2,7 +2,7 @@
   <div class="upper-message">
     <div class="message-user">
       <%# <!-- 投稿したユーザー名情報を出力する -->messagesテーブルのuser_idに紐づいてるユーザー名をuser.name %>
-      <%= message.user.name%> 
+      <%= message.user.name %> 
     </div>
     <div class="message-date">
       <%# <!-- 投稿した時刻を出力する -->テーブルのカラムより %>
@@ -14,5 +14,6 @@
       <%# <!-- 投稿したメッセージ内容を記述する -->テーブルのカラムより %>
       <%= message.content %>
     </div>
+    <%= image_tag message.image.variant(resize: '500*500'), class: 'message-image' if message.image.attached? %>
   </div>
 </div>
