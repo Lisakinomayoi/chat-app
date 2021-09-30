@@ -6,4 +6,5 @@ class User < ApplicationRecord
   validates :name, presence: true
   has_many :room_users #中間テーブルを利用して
   has_many :rooms, through: :room_users #多対多の関係を表す
+  has_many :messages
 end
